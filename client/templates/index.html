@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Computing Project</title>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron">
+<h2>Cloud Computing Project: Heart Failure Prediction</h2><br>
+<h4>Project members:</h4>
+<p>Neha zareen</p>
+<p>Mohammed Abdul Ghani</p>
+<p>Kowshiq Babu Indupuri</p>
+</div>
+</div>
+<div class="container">
+<form onsubmit="event.preventDefault();" method="POST">
+<div class="container">
+<div class="form-group">
+<label for="age">Age?</label>
+<input type="text" class="form-control" placeholder="What's your Age?" id="age" name="age" required>
+</div>
+<div class="form-group">
+<label for="gender">Gender?</label>
+<select class="form-control" id="gender" name="gender" required>
+<option disabled="" selected> Select option </option>
+<option value="0">Male</option>
+<option value="1">Female</option>
+</select>
+</div>
+<div class="form-group">
+<label for="chest_pain">Have Chest Pain?</label>
+<select class="form-control" id="chest_pain" name="chest_pain" required>
+<option disabled="" selected> Select option </option>
+<option value="0">Typical Angina</option>
+<option value="1">Atypical Angina</option>
+<option value="2">Non-anginal Pain</option>
+<option value="3">Asymptomatic</option>
+</select>
+</div>
+<div class="form-group" id="field-4">
+<label for="bps">What is Blood Pressure?</label>
+<input type="text" class="form-control" placeholder="What is your Resting Blood Pressure" id="bps" name="bps" required>
+</div>
+<div class="form-group" id="field-5">
+<label for="cholesterol">Serum Cholesterol (in mg/dl)?</label>
+<input type="text" class="form-control" placeholder="What is your Serum Cholesterol" id="cholesterol" name="cholesterol" required>
+</div>
+<div class="form-group" id="field-6">
+<label for="sugar">Blood Sugar (> 120 mg/dl)?</label>
+<select class="form-control" id="sugar" name="sugar" required="">
+<option disabled="" selected> Select option </option>
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+<div class="form-group" id="field-7">
+<label for="ecg">ECG Results?</label>
+<select class="form-control" id="ecg" name="ecg" required="">
+<option disabled="" selected> Select option </option>
+<option value="0">Normal</option>
+<option value="1">Having ST-T wave abnormality  </option>
+<option value="2">Probable or definite left ventricular hypertrophy</option>
+</select>
+</div>
+<div class="form-group" id="field-8">
+<label for="hr">Maximum heart rate?</label>
+<input type="text" class="form-control" placeholder="What is your Maximum heart rate?" id="hr" name="hr" required>
+</div>
+<div class="form-group" id="field-9">
+<label for="angina">Induced Angina?</label>
+<select class="form-control" id="angina" name="angina" required="">
+<option disabled="" selected> Select option </option>
+<option value="0">No</option>
+<option value="1">Yes</option>
+</select>
+</div>
+<div class="form-group" id="field-10">
+<label for="peak">Old peak value?</label>
+<input type="text" class="form-control" placeholder="What is your Old Peak Value?" id="peak" name="peak" required>
+</div>
+<div class="form-group" id="field-11">
+<label for="slope">Slope of the peak exercise ST segment?</label>
+<select class="form-control" id="slope" name="slope" required="">
+<option disabled="" selected> Select option </option>
+<option value="0">Upsloping</option>
+<option value="1">Flat</option>
+<option value="2">Downsloping</option>
+</select>
+</div>
+<button class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="getResults();" type="submit">Predict</button>
+</div>
+</form>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Your result</h4>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<p id="result">Your heart result will be shown here...</p>
+</div>
+</div>
+</div>
+</div>
+<div style="padding: 30px;">
+</div>
+</div>
+</body>
+</html>
